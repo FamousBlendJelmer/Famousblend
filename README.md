@@ -11,12 +11,14 @@ famous-blend-site/
 ├─ .nojekyll             ← zorgt dat GitHub de map 1-op-1 serveert
 ├─ README.md             ← dit bestand
 └─ assets/
+   ├─ logo.png           ← logo in espresso (hero, op crème achtergrond)
+   ├─ logo-cream.png     ← logo in crème (footer, op donkere achtergrond)
    ├─ favicon.png        ← tabblad-icoon 256px
    └─ favicon-32.png     ← tabblad-icoon 32px
 ```
 
-De bandnaam staat als tekst (lettertype Fraunces) op de pagina; er wordt geen
-logo-afbeelding gebruikt.
+Het logo (blender met microfoon + "FAMOUS BLEND") staat in de hero en de footer,
+ingekleurd in de merkkleuren.
 
 ---
 

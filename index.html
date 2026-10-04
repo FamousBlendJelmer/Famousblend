@@ -10,7 +10,7 @@
 <meta property="og:title" content="Famous Blend — binnenkort live">
 <meta property="og:description" content="Soul, pop en soft rocko, live. Blijf op de hoogte.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/favicon.png">
+<meta property="og:image" content="assets/logo.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -65,17 +65,12 @@
     font-size:clamp(11px,1.4vw,13px);letter-spacing:.44em;text-transform:uppercase;
     font-weight:700;color:var(--amber);margin-bottom:clamp(20px,3vw,30px);
   }
-  .wordmark{margin:0 auto clamp(10px,2vw,16px);line-height:.82}
-  .wordmark .wm-small{
-    display:block;font-family:"Fraunces",serif;font-weight:600;
-    letter-spacing:.44em;text-transform:uppercase;font-size:clamp(13px,2.4vw,20px);
-    color:var(--amber);margin-bottom:clamp(6px,1vw,10px);padding-left:.44em;
+  .logo-wrap{margin:0 auto clamp(14px,2vw,22px)}
+  .logo{
+    display:block;width:min(74vw,380px);height:auto;margin:0 auto;
+    filter:drop-shadow(0 14px 30px rgba(36,21,9,.16));
   }
-  .wordmark .wm-big{
-    display:block;font-family:"Fraunces",serif;font-weight:900;
-    font-variation-settings:"opsz" 144;font-size:clamp(60px,15vw,146px);
-    letter-spacing:-.02em;color:var(--espresso);
-  }
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
   .soultag{
     font-family:"Fraunces",serif;font-weight:600;font-style:italic;
     font-size:clamp(20px,3.3vw,30px);color:var(--gloed);line-height:1.15;margin-bottom:8px;
@@ -138,7 +133,7 @@
   /* ---------- footer ---------- */
   footer{background:var(--espresso);color:var(--paper);padding:clamp(40px,6vw,64px) 0}
   .foot{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
-  .foot-wm{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(24px,4vw,32px);letter-spacing:-.01em;color:var(--paper)}
+  .flogo{height:clamp(84px,12vw,116px);width:auto;display:block;filter:drop-shadow(0 8px 20px rgba(0,0,0,.35))}
   .foot .meta{font-size:13.5px;color:#d9c7a1;line-height:1.8}
   .foot .meta a{color:var(--amber-bright);text-decoration:none;font-weight:600}
   .foot .meta a:hover{text-decoration:underline}
@@ -159,15 +154,15 @@
 <header class="hero">
   <div class="wrap">
     <div class="kicker">Binnenkort live</div>
-    <div class="wordmark">
-      <span class="wm-small">Famous</span>
-      <span class="wm-big">Blend</span>
-    </div>
+    <h1 class="logo-wrap">
+      <span class="visually-hidden">Famous Blend</span>
+      <img class="logo" src="assets/logo.png" alt="Famous Blend — blender met microfoon" width="900" height="1085">
+    </h1>
     <p class="soultag">Warme soul, live geserveerd. </p>
     <div class="rule"><span>Soul · Pop · Soft Rock</span></div>
-    <p class="lede">Famous Blend brengt soul, pop en soft rock samen rond een vrouwelijke stem — gedragen door akoestische gitaar, bas en piano. De volledige website volgt binnenkort.</p>
+    <p class="lede">Famous Blend brengt soul, pop en soft rock samen rond een vrouwelijke stem — gedragen door akoestische gitaar, basgitaar en piano. De volledige website volgt binnenkort.</p>
     <div class="lineup">
-      <span>Akoetische gitaar</span><span>Basgitaar</span><span>Piano</span><span>Zang</span>
+      <span>Akoestische gitaar</span><span>Basgitaar</span><span>Piano</span><span>Zang</span>
     </div>
     <a class="cta" href="#blijf-op-de-hoogte"><span class="dot"></span>Blijf op de hoogte</a>
     <div class="scrollhint">↓ laat je gegevens achter</div>
@@ -223,7 +218,7 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div class="foot-wm">Famous Blend</div>
+      <img class="flogo" src="assets/logo-cream.png" alt="Famous Blend">
       <div class="meta">
         Famous Blend — soul · pop · soft rock, live.<br>
         Vooraankondiging · de volledige website volgt.<br>
