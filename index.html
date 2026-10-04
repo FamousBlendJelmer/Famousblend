@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Famous Blend — binnenkort live</title>
+<meta name="description" content="Famous Blend brengt soul, pop en folk samen rond een vrouwelijke stem. Vooraankondiging — de volledige website volgt binnenkort.">
+<meta name="theme-color" content="#241509">
+<!-- Open Graph / sociale media -->
+<meta property="og:title" content="Famous Blend — binnenkort live">
+<meta property="og:description" content="Soul, pop en folk, live. Blijf op de hoogte.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,500;1,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --espresso:#241509;
+    --paper:#F3E7D3;
+    --paper-2:#EFE0C7;
+    --amber:#B97A22;
+    --amber-bright:#D79433;
+    --gloed:#A63224;
+    --messing:#9C7B3A;
+    --ink:#241509;
+    --muted:#6f5a3f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  /* warm paper atmosphere */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(130% 90% at 50% 8%, #F8EEDB 0%, var(--paper) 46%, var(--paper-2) 100%);
+  }
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 clamp(22px,5vw,48px)}
+
+  /* vintage frame on larger screens */
+  .frame{
+    position:fixed;inset:16px;border:1px solid #c7b48f;pointer-events:none;z-index:5;
+    border-radius:3px;
+  }
+  .frame::after{content:"";position:absolute;inset:6px;border:1px solid #d8c6a1;border-radius:2px}
+  @media (max-width:640px){.frame{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:clamp(48px,9vw,96px) 0 clamp(36px,6vw,64px);position:relative;
+  }
+  .kicker{
+    font-size:clamp(11px,1.4vw,13px);letter-spacing:.44em;text-transform:uppercase;
+    font-weight:700;color:var(--amber);margin-bottom:clamp(20px,3vw,30px);
+  }
+  .wordmark{margin:0 auto clamp(10px,2vw,16px);line-height:.82}
+  .wordmark .wm-small{
+    display:block;font-family:"Fraunces",serif;font-weight:600;
+    letter-spacing:.44em;text-transform:uppercase;font-size:clamp(13px,2.4vw,20px);
+    color:var(--amber);margin-bottom:clamp(6px,1vw,10px);padding-left:.44em;
+  }
+  .wordmark .wm-big{
+    display:block;font-family:"Fraunces",serif;font-weight:900;
+    font-variation-settings:"opsz" 144;font-size:clamp(60px,15vw,146px);
+    letter-spacing:-.02em;color:var(--espresso);
+  }
+  .soultag{
+    font-family:"Fraunces",serif;font-weight:600;font-style:italic;
+    font-size:clamp(20px,3.3vw,30px);color:var(--gloed);line-height:1.15;margin-bottom:8px;
+  }
+  .rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px 0 22px;color:var(--messing)}
+  .rule::before,.rule::after{content:"";height:1px;width:min(16vw,70px);background:currentColor;opacity:.6}
+  .rule span{font-size:11px;letter-spacing:.34em;text-transform:uppercase;font-weight:700}
+  .lede{max-width:52ch;margin:0 auto;color:var(--muted);font-size:clamp(15px,1.7vw,17.5px)}
+  .lineup{margin:clamp(24px,4vw,34px) auto 0;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+  .lineup span{
+    font-size:12px;letter-spacing:.11em;text-transform:uppercase;font-weight:600;color:#5a4a33;
+    padding:7px 14px;border:1px solid #cdbb96;border-radius:100px;background:#fbf4e6aa;
+  }
+  .cta{
+    margin-top:clamp(30px,5vw,42px);display:inline-flex;align-items:center;gap:10px;
+    font-weight:700;letter-spacing:.02em;text-decoration:none;color:var(--paper);
+    background:var(--espresso);padding:14px 26px;border-radius:100px;font-size:15px;
+    transition:transform .18s ease, background .18s ease;
+  }
+  .cta:hover{background:#38210f;transform:translateY(-2px)}
+  .cta .dot{width:7px;height:7px;border-radius:50%;background:var(--amber-bright)}
+  .scrollhint{margin-top:clamp(26px,5vw,40px);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#a08a63}
+
+  /* ---------- signup / contact ---------- */
+  .signup{padding:clamp(56px,9vw,104px) 0}
+  .card{
+    max-width:620px;margin:0 auto;background:#fcf6ea;border:1px solid #d9c7a1;
+    border-radius:14px;padding:clamp(26px,5vw,44px);
+    box-shadow:0 24px 60px -34px rgba(36,21,9,.4);
+  }
+  .card h2{
+    font-family:"Fraunces",serif;font-weight:900;font-size:clamp(26px,4vw,38px);
+    line-height:1.02;letter-spacing:-.01em;margin-bottom:12px;
+  }
+  .card .sub{color:var(--muted);margin-bottom:26px;font-size:15.5px}
+  .field{margin-bottom:16px;text-align:left}
+  .field label{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#5a4a33;margin-bottom:7px}
+  .field input,.field textarea{
+    width:100%;font:inherit;color:var(--ink);background:#fffdf8;
+    border:1px solid #cdbb96;border-radius:9px;padding:12px 14px;transition:border .15s ease, box-shadow .15s ease;
+  }
+  .field textarea{min-height:110px;resize:vertical}
+  .field input:focus,.field textarea:focus{
+    outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(185,122,34,.18);
+  }
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+  button.submit{
+    width:100%;font:inherit;font-weight:700;letter-spacing:.02em;cursor:pointer;
+    color:var(--paper);background:var(--amber);border:none;border-radius:100px;
+    padding:15px 22px;font-size:16px;transition:background .18s ease, transform .18s ease;
+  }
+  button.submit:hover{background:var(--gloed);transform:translateY(-1px)}
+  button.submit:disabled{opacity:.6;cursor:default;transform:none}
+  .formnote{margin-top:14px;font-size:12.5px;color:#8a7352;text-align:center}
+  .formnote a{color:var(--amber);font-weight:600}
+  .status{margin-top:16px;text-align:center;font-weight:600;display:none}
+  .status.ok{display:block;color:#3f6d33}
+  .status.err{display:block;color:var(--gloed)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--espresso);color:var(--paper);padding:clamp(40px,6vw,64px) 0}
+  .foot{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+  .foot-wm{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(24px,4vw,32px);letter-spacing:-.01em;color:var(--paper)}
+  .foot .meta{font-size:13.5px;color:#d9c7a1;line-height:1.8}
+  .foot .meta a{color:var(--amber-bright);text-decoration:none;font-weight:600}
+  .foot .meta a:hover{text-decoration:underline}
+  .copyr{margin-top:22px;font-size:12px;letter-spacing:.08em;color:#9c835f}
+
+  @media (prefers-reduced-motion:no-preference){
+    .hero>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+    .hero .logo{animation-delay:.05s}
+    .hero .soultag{animation-delay:.12s}
+    .hero .lede{animation-delay:.18s}
+    @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="frame" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Binnenkort live</div>
+    <div class="wordmark">
+      <span class="wm-small">Famous</span>
+      <span class="wm-big">Blend</span>
+    </div>
+    <p class="soultag">Warme soul, live geserveerd.</p>
+    <div class="rule"><span>Soul · Pop · Folk</span></div>
+    <p class="lede">Famous Blend brengt soul, pop en folk samen rond een vrouwelijke stem — gedragen door akoestische gitaar, basgitaar en piano. De volledige website volgt binnenkort.</p>
+    <div class="lineup">
+      <span>Akoestische gitaar</span><span>Basgitaar</span><span>Piano</span><span>Zang</span>
+    </div>
+    <a class="cta" href="#blijf-op-de-hoogte"><span class="dot"></span>Blijf op de hoogte</a>
+    <div class="scrollhint">↓ laat je gegevens achter</div>
+  </div>
+</header>
+
+<section class="signup" id="blijf-op-de-hoogte">
+  <div class="wrap">
+    <div class="card">
+      <h2>Blijf op de hoogte</h2>
+      <p class="sub">Laat je naam en e-mail achter — we laten van ons horen zodra er nieuws of een eerste optreden is. Voor een boeking kun je er meteen een bericht bij zetten.</p>
+
+      <!-- =====================================================================
+           CONTACTFORMULIER (Web3Forms)
+           Je e-mailadres staat NIET in deze code en is NIET zichtbaar in de
+           broncode in de browser. Het formulier gebruikt een anonieme
+           "access key". Zo stel je die in:
+             1. Ga naar https://web3forms.com, vul het e-mailadres in waar de
+                berichten heen moeten, en je krijgt een access key (een lange
+                code) gemaild. Geen account nodig.
+             2. Vervang hieronder WEB3FORMS_ACCESS_KEY door die code.
+           De inzendingen komen binnen op het adres dat je bij Web3Forms opgaf;
+           dat adres blijft volledig privé (het staat alleen op hun server).
+           ===================================================================== -->
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Anonieme sleutel i.p.v. je e-mailadres -->
+        <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="Nieuw bericht via Famous Blend site">
+        <input type="hidden" name="from_name" value="Famous Blend website">
+        <!-- honeypot tegen spam (verborgen) -->
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true" style="display:none">
+
+        <div class="field">
+          <label for="name">Naam</label>
+          <input id="name" name="Naam" type="text" required autocomplete="name" placeholder="Je naam">
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="E-mail" type="email" required autocomplete="email" placeholder="jij@voorbeeld.nl">
+        </div>
+        <div class="field">
+          <label for="msg">Bericht <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#9c835f">(optioneel)</span></label>
+          <textarea id="msg" name="Bericht" placeholder="Bijv. interesse in een optreden, of gewoon hallo"></textarea>
+        </div>
+
+        <button class="submit" type="submit">Verstuur</button>
+        <p class="status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-wm">Famous Blend</div>
+      <div class="meta">
+        Famous Blend — soul · pop · folk, live.<br>
+        Vooraankondiging · de volledige website volgt.<br>
+        Vragen of boekingen? Gebruik het formulier hierboven.
+      </div>
+    </div>
+    <div class="copyr">© <span id="yr"></span> Famous Blend</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Progressive enhancement: verstuur via Web3Forms zonder de pagina te verlaten.
+  // Zonder JavaScript werkt het gewone formulier ook (Web3Forms toont dan zelf
+  // een standaard bedankt-pagina).
+  (function(){
+    var form = document.getElementById('contact-form');
+    var statusEl = document.getElementById('form-status');
+    var btn = form.querySelector('button.submit');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      statusEl.className = 'status';
+      statusEl.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Versturen…';
+
+      var data = new FormData(form);
+      fetch('https://api.web3forms.com/submit', {
+        method:'POST',
+        headers:{'Accept':'application/json'},
+        body:data
+      }).then(function(r){ return r.json(); })
+        .then(function(res){
+          if (res.success){
+            form.reset();
+            statusEl.className = 'status ok';
+            statusEl.textContent = 'Bedankt! Je staat op de lijst — we laten van ons horen.';
+          } else {
+            throw new Error(res.message || 'mislukt');
+          }
+        })
+        .catch(function(){
+          statusEl.className = 'status err';
+          statusEl.textContent = 'Versturen lukte niet. Probeer het later nog eens.';
+        })
+        .finally(function(){
+          btn.disabled = false;
+          btn.textContent = 'Verstuur';
+        });
+    });
+  })();
+</script>
+</body>
+</html>
