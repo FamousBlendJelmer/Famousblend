@@ -174,19 +174,7 @@
     <div class="card">
       <h2>Blijf op de hoogte</h2>
       <p class="sub">Laat je naam en e-mail achter — we laten van ons horen zodra er nieuws of een eerste optreden is. Voor een boeking kun je er meteen een bericht bij zetten.</p>
-
-      <!-- =====================================================================
-           CONTACTFORMULIER (Web3Forms)
-           Je e-mailadres staat NIET in deze code en is NIET zichtbaar in de
-           broncode in de browser. Het formulier gebruikt een anonieme
-           "access key". Zo stel je die in:
-             1. Ga naar https://web3forms.com, vul het e-mailadres in waar de
-                berichten heen moeten, en je krijgt een access key (een lange
-                code) gemaild. Geen account nodig.
-             2. Vervang hieronder WEB3FORMS_ACCESS_KEY door die code.
-           De inzendingen komen binnen op het adres dat je bij Web3Forms opgaf;
-           dat adres blijft volledig privé (het staat alleen op hun server).
-           ===================================================================== -->
+      
       <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
         <!-- Anonieme sleutel i.p.v. je e-mailadres -->
         <input type="hidden" name="access_key" value="3bf26bcf-2be9-467b-b56f-bc5a20164185">
@@ -232,9 +220,6 @@
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Progressive enhancement: verstuur via Web3Forms zonder de pagina te verlaten.
-  // Zonder JavaScript werkt het gewone formulier ook (Web3Forms toont dan zelf
-  // een standaard bedankt-pagina).
   (function(){
     var form = document.getElementById('contact-form');
     var statusEl = document.getElementById('form-status');
